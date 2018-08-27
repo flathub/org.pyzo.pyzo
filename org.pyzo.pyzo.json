@@ -85,8 +85,8 @@
         },
         {
           "type" : "file",
-          "url" : "https://files.pythonhosted.org/packages/d2/53/ac9dacfcb36e7ed772979f9fef2a8d93378da9ab0daf48541636a6400990/pyzo-4.5.1.tar.gz",
-          "sha256" : "5a2813cb566d678806989d308c5421e2655a7e8cce36c50418a940ad145b5fad"
+          "url" : "https://files.pythonhosted.org/packages/c1/fa/600b6da5de096a2da838f81aeac042310ad78660f250ea1b9f85435a808f/pyzo-4.6.0.tar.gz",
+          "sha256" : "8c39363bec2d549f48c6569f7780a0e9b4cb64e80cf4f88b295080dca64252dd"
         }
       ]
     }
