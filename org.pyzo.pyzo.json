@@ -10,7 +10,11 @@
     "--share=network",
     "--device=dri",
     "--socket=wayland",
-    "--filesystem=host"
+    "--filesystem=host",
+    "--filesystem=xdg-config/kdeglobals:ro",
+    "--filesystem=xdg-run/dconf",
+    "--talk-name=com.canonical.AppMenu.Registrar",
+    "--talk-name=com.canonical.AppMenu.Registrar.*"
   ],
   "modules" : [
     {
