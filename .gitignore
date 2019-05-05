@@ -1,4 +1,7 @@
 pyzo-repo/
 python3-pyzo/
 .flatpak-builder/
+dev-repo/
+python3pyzo/
+test/
 
