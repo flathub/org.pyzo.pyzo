@@ -10,7 +10,8 @@
     "--socket=wayland",
     "--device=dri",
     "--share=network",
-    "--filesystem=home"
+    "--filesystem=xdg-documents",
+    "--filesystem=xdg-download"
   ],
   "modules": [
     {
