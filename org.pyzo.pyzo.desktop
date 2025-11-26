@@ -2,7 +2,7 @@
 Type=Application
 Name=Pyzo
 GenericName=Python IDE
-Comment=IDE Python pour le calcul scientifique interactif
+Comment=Python IDE for interactive scientific computing
 Icon=org.pyzo.pyzo
 Exec=pyzo
 Terminal=false
