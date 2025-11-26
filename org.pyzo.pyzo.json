@@ -1,5 +1,5 @@
 {
-  "app-id": "org.pyzo.pyzo",
+  "app-id": "org.pyzo.Pyzo",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "24.08",
   "sdk": "org.freedesktop.Sdk",
@@ -11,80 +11,31 @@
     "--device=dri",
     "--share=network",
     "--filesystem=xdg-documents",
-    "--filesystem=xdg-download",
-    "--talk-name=com.canonical.AppMenu.Registrar"
+    "--filesystem=xdg-download"
   ],
-
   "modules": [
-
     {
-      "name": "sip",
+      "name": "python3-pyqt6",
       "buildsystem": "simple",
       "build-commands": [
-        "pip3 install --verbose --prefix=${FLATPAK_DEST} --no-build-isolation ."
+        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} PyQt6-6.7.0-py3-none-any.whl --no-build-isolation"
       ],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://files.pythonhosted.org/packages/source/s/sip/sip-6.8.3.tar.gz",
-          "sha256": "888547b018bb24c36aded519e93d3e513d4c6aa0ba55b7cc1affbd45cf10762c"
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/xx/xx/PyQt6-6.7.0-py3-none-any.whl",
+          "sha256": "sha256_exact_du_fichier"
         }
       ]
     },
-
-    {
-      "name": "pyqt5-sip",
-      "buildsystem": "simple",
-      "build-commands": [
-        "pip3 install --verbose --prefix=${FLATPAK_DEST} --no-build-isolation ."
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://files.pythonhosted.org/packages/source/P/PyQt5_sip/PyQt5_sip-12.15.0.tar.gz",
-          "sha256": "8b3ae628648524eb9edb22a3b7b0597feeecbc9b5b6bffa50d663219c2f47883"
-        }
-      ]
-    },
-
-    {
-      "name": "pyqt5-qt5",
-      "buildsystem": "simple",
-      "build-commands": [
-        "pip3 install --verbose --prefix=${FLATPAK_DEST} --no-build-isolation ."
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://files.pythonhosted.org/packages/source/p/pyqt5-qt5/pyqt5-qt5-5.15.18.tar.gz",
-          "sha256": "2f5c60d9a87a120c359f830690421c949dd7dc5df28ae15ab6fd0cd3679f36f6"
-        }
-      ]
-    },
-
-    {
-      "name": "pyqt5",
-      "buildsystem": "simple",
-      "build-commands": [
-        "pip3 install --verbose --prefix=${FLATPAK_DEST} --no-build-isolation ."
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://files.pythonhosted.org/packages/source/P/PyQt5/PyQt5-5.15.11.tar.gz",
-          "sha256": "5a8599cefc4b79f78da33bddda88a67a2dc2f1e8ab546020f5a64eab2dba1e19"
-        }
-      ]
-    },
-
     {
       "name": "pyzo",
       "buildsystem": "simple",
       "build-commands": [
-        "pip3 install --verbose --prefix=${FLATPAK_DEST} --no-build-isolation pyzo-4.20.0-py3-none-any.whl",
-        "install -Dm644 org.pyzo.pyzo.desktop ${FLATPAK_DEST}/share/applications/org.pyzo.pyzo.desktop",
-        "install -Dm644 org.pyzo.pyzo.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/org.pyzo.pyzo.svg",
-        "install -Dm644 org.pyzo.pyzo.appdata.xml ${FLATPAK_DEST}/share/metainfo/org.pyzo.pyzo.metainfo.xml"
+        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyzo-4.20.0-py3-none-any.whl --no-build-isolation",
+        "install -Dm644 org.pyzo.Pyzo.desktop ${FLATPAK_DEST}/share/applications/org.pyzo.Pyzo.desktop",
+        "install -Dm644 org.pyzo.Pyzo.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/org.pyzo.Pyzo.svg",
+        "install -Dm644 org.pyzo.Pyzo.metainfo.xml ${FLATPAK_DEST}/share/metainfo/org.pyzo.Pyzo.metainfo.xml"
       ],
       "sources": [
         {
@@ -92,9 +43,18 @@
           "url": "https://files.pythonhosted.org/packages/92/25/1d8032ebcc569f10729f754e22b9c97a43f016e0dcd726e7c9ad3e9fed15/pyzo-4.20.0-py3-none-any.whl",
           "sha256": "4415fb39b098e7ac6428c369340c73c7b4907454ccca549315ec6b873d72478a"
         },
-        { "type": "file", "path": "org.pyzo.pyzo.desktop" },
-        { "type": "file", "path": "org.pyzo.pyzo.svg" },
-        { "type": "file", "path": "org.pyzo.pyzo.appdata.xml" }
+        {
+          "type": "file",
+          "path": "org.pyzo.Pyzo.desktop"
+        },
+        {
+          "type": "file",
+          "path": "org.pyzo.Pyzo.svg"
+        },
+        {
+          "type": "file",
+          "path": "org.pyzo.Pyzo.metainfo.xml"
+        }
       ]
     }
   ]
