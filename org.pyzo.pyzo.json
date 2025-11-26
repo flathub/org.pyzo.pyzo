@@ -1,155 +1,88 @@
 {
-  "app-id" : "org.pyzo.pyzo",
-  "runtime" : "org.kde.Platform",
-  "runtime-version" : "5.15",
-  "sdk" : "org.kde.Sdk",
-  "command" : "pyzo",
-  "finish-args" : [
+  "app-id": "org.pyzo.pyzo",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "24.08",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "pyzo",
+  "finish-args": [
     "--share=ipc",
-    "--socket=x11",
-    "--share=network",
-    "--device=dri",
+    "--socket=fallback-x11",
     "--socket=wayland",
-    "--filesystem=host",
-    "--talk-name=com.canonical.AppMenu.Registrar",
-    "--talk-name=com.canonical.AppMenu.Registrar.*"
+    "--device=dri",
+    "--share=network",
+    "--filesystem=xdg-documents",
+    "--filesystem=xdg-download",
+    "--talk-name=com.canonical.AppMenu.Registrar"
   ],
-  "modules" : [
+  "modules": [
     {
-      "name": "python3-packaging",
+      "name": "python3-pyqt5-sip",
       "buildsystem": "simple",
       "build-commands": [
-        "python3 setup.py install --prefix=${FLATPAK_DEST} --root=/ --optimize=1"
+        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} PyQt5_sip-12.15.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.whl --no-build-isolation"
       ],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://files.pythonhosted.org/packages/86/3c/bcd09ec5df7123abcf695009221a52f90438d877a2f1499453c6938f5728/packaging-20.9.tar.gz",
-          "sha256": "5b327ac1320dc863dca72f4514ecc086f31186744b84a230374cc1fd776feae5"
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/d1/6c/9a2fe24f8970e092613f709283a2101403490a209a30de3de89a413d9915/PyQt5_sip-12.15.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.whl",
+          "sha256": "0cd21c3215e3c47fdd5fa7a2dc3dd1e07a7230b0626e905a7217925068c788b9"
         }
       ]
     },
     {
-      "name": "python3-Pyparsing",
+      "name": "python3-pyqt5-qt5",
       "buildsystem": "simple",
       "build-commands": [
-        "python3 setup.py install --prefix=${FLATPAK_DEST} --root=/ --optimize=1"
+        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyqt5_qt5-5.15.18-py3-none-manylinux2014_x86_64.whl --no-build-isolation"
       ],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://github.com/pyparsing/pyparsing/releases/download/pyparsing_2.4.7/pyparsing-2.4.7.tar.gz",
-          "sha256": "c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1"
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/9a/46/ffe177f99f897a59dc237a20059020427bd2d3853d713992b8081933ddfe/pyqt5_qt5-5.15.18-py3-none-manylinux2014_x86_64.whl",
+          "sha256": "bf2457e6371969736b4f660a0c153258fa03dbc6a181348218e6f05421682af7"
         }
       ]
     },
     {
-      "name": "python3-toml",
+      "name": "python3-pyqt5",
       "buildsystem": "simple",
-      "ensure-writable": [
-        "/lib/python3.8/site-packages/easy-install.pth"
-      ],
       "build-commands": [
-        "python3 setup.py install --prefix=${FLATPAK_DEST} --root=/ --optimize=1"
+        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} PyQt5-5.15.11-cp38-abi3-manylinux_2_17_x86_64.whl --no-build-isolation"
       ],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://github.com/uiri/toml/archive/refs/tags/0.10.2.tar.gz",
-          "sha256": "71d4039bbdec91e3e7591ec5d6c943c58f9a2d17e5f6783acdc378f743fcdd2a"
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/b4/8c/4065950f9d013c4b2e588fe33cf04e564c2322842d84dbcbce5ba1dc28b0/PyQt5-5.15.11-cp38-abi3-manylinux_2_17_x86_64.whl",
+          "sha256": "cd672a6738d1ae33ef7d9efa8e6cb0a1525ecf53ec86da80a9e1b6ec38c8d0f1"
         }
       ]
     },
     {
-      "name": "sip",
+      "name": "pyzo",
       "buildsystem": "simple",
       "build-commands": [
-        "python3 setup.py install --prefix=/app --root=/"
-      ],
-      "cleanup": [
-        "/bin"
+        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyzo-4.20.0-py3-none-any.whl --no-build-isolation",
+        "install -Dm644 org.pyzo.pyzo.desktop ${FLATPAK_DEST}/share/applications/org.pyzo.pyzo.desktop",
+        "install -Dm644 org.pyzo.pyzo.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/org.pyzo.pyzo.svg",
+        "install -Dm644 org.pyzo.pyzo.appdata.xml ${FLATPAK_DEST}/share/metainfo/org.pyzo.pyzo.metainfo.xml"
       ],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://files.pythonhosted.org/packages/33/e9/27730ac17713c0a80d81d8f3bb56213f1549d96f9dc183fd16a7eec6287c/sip-5.5.0.tar.gz",
-          "sha256": "5d024c419b30fea8a6de8c71a560c7ab0bc3c221fbfb14d55a5b865bd58eaac5"
-        }
-      ]
-    },
-    {
-      "name": "PyQt5_sip",
-      "buildsystem": "simple",
-      "build-commands": [
-        "python3 setup.py install --prefix=/app --root=/"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://files.pythonhosted.org/packages/b1/40/dd8f081f04a12912b65417979bf2097def0af0f20c89083ada3670562ac5/PyQt5_sip-12.9.0.tar.gz",
-          "sha256": "d3e4489d7c2b0ece9d203ae66e573939f7f60d4d29e089c9f11daa17cfeaae32"
-        }
-      ]
-    },
-    {
-      "name": "PyQt5",
-      "buildsystem": "simple",
-      "build-options": {
-          "arch": {
-              "aarch64": {
-                  "env": {
-                      "DISABLE_DESKTOP_OPENGL": "--disable-feature=PyQt_Desktop_OpenGL"
-                  }
-              }
-          }
-      },
-      "build-commands": [
-        "PYVER=$(python3 -c \"import sys;print(sys.version_info[1])\") && QMAKEPATH=/app/lib python3 configure.py --confirm-license --bindir=/app/bin --destdir=/app/lib/python3.${PYVER}/site-packages --sipdir=/app/share/sip --stubsdir=/app/lib/python3.${PYVER}/site-packages/PyQt5 --no-designer-plugin --no-qml-plugin --no-python-dbus --no-tools --enable=QtCore --enable=QtGui --enable=QtNetwork --enable=QtWidgets ${DISABLE_DESKTOP_OPENGL}",
-        "make -j $FLATPAK_BUILDER_N_JOBS",
-        "make install"
-      ],
-      "cleanup": [
-        "/bin"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://files.pythonhosted.org/packages/8e/a4/d5e4bf99dd50134c88b95e926d7b81aad2473b47fde5e3e4eac2c69a8942/PyQt5-5.15.4.tar.gz",
-          "sha256": "2a69597e0dd11caabe75fae133feca66387819fc9bc050f547e5551bce97e5be"
-        }
-      ]
-    },
-    {
-      "name" : "python3-pyzo",
-      "buildsystem" : "simple",
-      "build-commands" : [
-        "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyzo",
-        "install -Dm644 org.pyzo.pyzo128x128.png /app/share/icons/hicolor/128x128/apps/org.pyzo.pyzo.png",
-        "install -Dm644 org.pyzo.pyzo64x64.png /app/share/icons/hicolor/64x64/apps/org.pyzo.pyzo.png",
-        "install -Dm644 org.pyzo.pyzo.desktop /app/share/applications/org.pyzo.pyzo.desktop",
-        "install -Dm644 org.pyzo.pyzo.appdata.xml /app/share/appdata/org.pyzo.pyzo.appdata.xml"
-      ],
-      "sources" : [
-        {
-          "type" : "file",
-          "path" : "org.pyzo.pyzo.desktop"
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/92/25/1d8032ebcc569f10729f754e22b9c97a43f016e0dcd726e7c9ad3e9fed15/pyzo-4.20.0-py3-none-any.whl",
+          "sha256": "4415fb39b098e7ac6428c369340c73c7b4907454ccca549315ec6b873d72478a"
         },
         {
-          "type" : "file",
-          "path" : "org.pyzo.pyzo.appdata.xml"
+          "type": "file",
+          "path": "org.pyzo.pyzo.desktop"
         },
         {
-          "type" : "file",
-          "path" : "org.pyzo.pyzo64x64.png"
+          "type": "file",
+          "path": "org.pyzo.pyzo.svg"
         },
         {
-          "type" : "file",
-          "path" : "org.pyzo.pyzo128x128.png"
-        },
-        {
-          "type" : "file",
-          "url" : "https://files.pythonhosted.org/packages/16/80/67cb8b4026b5997cf3354f3b693ec7c38ef855f439eb977f0198a9121026/pyzo-4.11.2.tar.gz",
-          "sha256" : "f9d3bcd35bf28643509fb02307a1f889c07483e001c0349bb63b0149d37165ca"
+          "type": "file",
+          "path": "org.pyzo.pyzo.appdata.xml"
         }
       ]
     }
