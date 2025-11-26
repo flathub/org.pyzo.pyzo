@@ -1,0 +1,83 @@
+{
+  "app-id": "org.pyzo.Pyzo",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "24.08",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "pyzo",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=x11",
+    "--socket=wayland",
+    "--device=dri",
+    "--share=network",
+    "--filesystem=home"
+  ],
+  "modules": [
+    {
+      "name": "python3-pyqt6-sip",
+      "buildsystem": "simple",
+      "build-commands": [
+        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyqt6_sip-13.10.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.whl --no-build-isolation"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/21/40/de9491213f480a27199690616959a17a0f234962b86aa1dd4ca2584e922d/pyqt6_sip-13.10.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.whl",
+          "sha256": "37af463dcce39285e686d49523d376994d8a2508b9acccb7616c4b117c9c4ed7"
+        }
+      ]
+    },
+    {
+      "name": "python3-pyqt6-qt6",
+      "buildsystem": "simple",
+      "build-commands": [
+        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyqt6_qt6-6.10.0-py3-none-manylinux_2_34_x86_64.whl --no-build-isolation"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/c1/32/1d84ab75795b0984935e32d2a51200b94328a45954c28360a97d02f1c376/pyqt6_qt6-6.10.0-py3-none-manylinux_2_34_x86_64.whl",
+          "sha256": "cd38b281bb7229b8114f13126aacd77f831a97105fdb1d900260a48ead8c9fcd"
+        }
+      ]
+    },
+    {
+      "name": "python3-pyqt6",
+      "buildsystem": "simple",
+      "build-commands": [
+        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyqt6-6.10.0-cp39-abi3-manylinux_2_34_x86_64.whl --no-build-isolation"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/00/31/e55f7b718df92423b5af3f0fe11e770e56d7576c03adc6b6866b0e8beb46/pyqt6-6.10.0-cp39-abi3-manylinux_2_34_x86_64.whl",
+          "sha256": "43e94a0ad4713055b47b4676d23432349845729912e4f3d20ac95935931c5e6f"
+        }
+      ]
+    },
+    {
+      "name": "pyzo",
+      "buildsystem": "simple",
+      "build-commands": [
+        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyzo-4.20.0-py3-none-any.whl --no-build-isolation",
+        "install -Dm644 org.pyzo.Pyzo.desktop ${FLATPAK_DEST}/share/applications/org.pyzo.Pyzo.desktop",
+        "install -Dm644 org.pyzo.Pyzo.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/org.pyzo.Pyzo.svg"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/92/25/1d8032ebcc569f10729f754e22b9c97a43f016e0dcd726e7c9ad3e9fed15/pyzo-4.20.0-py3-none-any.whl",
+          "sha256": "4415fb39b098e7ac6428c369340c73c7b4907454ccca549315ec6b873d72478a"
+        },
+        {
+          "type": "file",
+          "path": "org.pyzo.Pyzo.desktop"
+        },
+        {
+          "type": "file",
+          "path": "org.pyzo.Pyzo.svg"
+        }
+      ]
+    }
+  ]
+}
