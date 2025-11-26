@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.pyzo.pyzo</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>BSD-2-Clause</project_license>
+  <name>Pyzo</name>
+  <summary>Python IDE for scientific computing</summary>
+  
+  <description>
+    <p>
+      Pyzo is a cross-platform Python IDE focused on interactivity and introspection,
+      which makes it very suitable for scientific computing. Its practical design is
+      aimed at simplicity and efficiency.
+    </p>
+    <p>
+      It consists of two main components, the editor and the shell, and uses
+      a set of pluggable tools to help the programmer in various ways. Some
+      example tools are source structure, project manager, interactive help, workspace.
+    </p>
+    <p>
+      Pyzo is written in pure Python 3 and uses the Qt GUI toolkit. After installing
+      Pyzo, it can be used to execute code on any Python version available on your
+      system (Python 2.4 - 3.x, including PyPy).
+    </p>
+  </description>
+  
+  <launchable type="desktop-id">org.pyzo.pyzo.desktop</launchable>
+  
+  <provides>
+    <binary>pyzo</binary>
+  </provides>
+  
+  <url type="homepage">https://pyzo.org</url>
+  <url type="bugtracker">https://github.com/pyzo/pyzo/issues</url>
+  <url type="help">https://pyzo.org/start.html</url>
+  <url type="translate">https://github.com/pyzo/pyzo/wiki/Translations</url>
+  
+  <screenshots>
+    <screenshot type="default">
+      <caption>Pyzo main window with code editor and interactive shell</caption>
+      <image>https://pyzo.org/screenshots/screen-default-16-9.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Pyzo on Linux</caption>
+      <image>https://pyzo.org/screenshots/screen00_linux.png</image>
+    </screenshot>
+  </screenshots>
+  
+  <releases>
+    <release version="4.20.0" date="2024-08-04">
+      <description>
+        <p>Updated to Pyzo 4.20.0 with freedesktop runtime and modern PyQt5</p>
+      </description>
+    </release>
+    <release version="4.11.2" date="2021-03-01"/>
+    <release version="4.9.0" date="2019-09-16"/>
+  </releases>
+  
+  <content_rating type="oars-1.1"/>
+  
+  <developer id="org.pyzo">
+    <name>Almar Klein</name>
+  </developer>
+  
+  <update_contact>almar.klein@gmail.com</update_contact>
+</component>
