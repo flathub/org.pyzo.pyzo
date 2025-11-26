@@ -16,16 +16,30 @@
   ],
   "modules": [
     {
-      "name": "python3-pyqt5-sip",
+      "name": "sip",
       "buildsystem": "simple",
       "build-commands": [
-        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} PyQt5_sip-12.15.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.whl --no-build-isolation"
+        "pip3 install --prefix=${FLATPAK_DEST} --no-build-isolation sip"
       ],
       "sources": [
         {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/d1/6c/9a2fe24f8970e092613f709283a2101403490a209a30de3de89a413d9915/PyQt5_sip-12.15.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.whl",
-          "sha256": "0cd21c3215e3c47fdd5fa7a2dc3dd1e07a7230b0626e905a7217925068c788b9"
+          "type": "archive",
+          "url": "https://files.pythonhosted.org/packages/source/s/sip/sip-6.8.3.tar.gz",
+          "sha256": "c068d02fe7247c1dec7073c7d8a1b92c2e6ddcb7a8642bf4e0e141e58c5d10f2"
+        }
+      ]
+    },
+    {
+      "name": "python3-pyqt5-sip",
+      "buildsystem": "simple",
+      "build-commands": [
+        "pip3 install --prefix=${FLATPAK_DEST} --no-build-isolation PyQt5_sip"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://files.pythonhosted.org/packages/source/P/PyQt5_sip/PyQt5_sip-12.15.0.tar.gz",
+          "sha256": "f17a348c951e74100bbd3f75c244ec2c2d0a4403c6e1960cc6bfb1f0dc147bc4"
         }
       ]
     },
@@ -33,13 +47,13 @@
       "name": "python3-pyqt5-qt5",
       "buildsystem": "simple",
       "build-commands": [
-        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyqt5_qt5-5.15.18-py3-none-manylinux2014_x86_64.whl --no-build-isolation"
+        "pip3 install --prefix=${FLATPAK_DEST} --no-build-isolation pyqt5-qt5"
       ],
       "sources": [
         {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/9a/46/ffe177f99f897a59dc237a20059020427bd2d3853d713992b8081933ddfe/pyqt5_qt5-5.15.18-py3-none-manylinux2014_x86_64.whl",
-          "sha256": "bf2457e6371969736b4f660a0c153258fa03dbc6a181348218e6f05421682af7"
+          "type": "archive",
+          "url": "https://files.pythonhosted.org/packages/source/p/pyqt5-qt5/pyqt5-qt5-5.15.14.tar.gz",
+          "sha256": "b68c1a1e66037a4ee83b45a2048bf2a3e7fa09e3db7847285da6af9b88da7dc8"
         }
       ]
     },
@@ -47,13 +61,13 @@
       "name": "python3-pyqt5",
       "buildsystem": "simple",
       "build-commands": [
-        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} PyQt5-5.15.11-cp38-abi3-manylinux_2_17_x86_64.whl --no-build-isolation"
+        "pip3 install --prefix=${FLATPAK_DEST} --no-build-isolation PyQt5"
       ],
       "sources": [
         {
-          "type": "file",
-          "url": "https://files.pythonhosted.org/packages/b4/8c/4065950f9d013c4b2e588fe33cf04e564c2322842d84dbcbce5ba1dc28b0/PyQt5-5.15.11-cp38-abi3-manylinux_2_17_x86_64.whl",
-          "sha256": "cd672a6738d1ae33ef7d9efa8e6cb0a1525ecf53ec86da80a9e1b6ec38c8d0f1"
+          "type": "archive",
+          "url": "https://files.pythonhosted.org/packages/source/P/PyQt5/PyQt5-5.15.11.tar.gz",
+          "sha256": "0222b439698f3fb7de6b97a7aa85534ff16c5c93d3536bc3a1e9b0d09c543d2e"
         }
       ]
     },
@@ -61,7 +75,7 @@
       "name": "pyzo",
       "buildsystem": "simple",
       "build-commands": [
-        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyzo-4.20.0-py3-none-any.whl --no-build-isolation",
+        "pip3 install --prefix=${FLATPAK_DEST} --no-build-isolation pyzo",
         "install -Dm644 org.pyzo.pyzo.desktop ${FLATPAK_DEST}/share/applications/org.pyzo.pyzo.desktop",
         "install -Dm644 org.pyzo.pyzo.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/org.pyzo.pyzo.svg",
         "install -Dm644 org.pyzo.pyzo.appdata.xml ${FLATPAK_DEST}/share/metainfo/org.pyzo.pyzo.metainfo.xml"
@@ -88,3 +102,4 @@
     }
   ]
 }
+
