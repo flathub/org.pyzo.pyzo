@@ -18,13 +18,20 @@
       "name": "python3-pyqt6-sip",
       "buildsystem": "simple",
       "build-commands": [
-        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyqt6_sip-13.10.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.whl --no-build-isolation"
+        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyqt6_sip*.whl --no-build-isolation"
       ],
       "sources": [
         {
           "type": "file",
+          "only-arches": ["x86_64"],
           "url": "https://files.pythonhosted.org/packages/21/40/de9491213f480a27199690616959a17a0f234962b86aa1dd4ca2584e922d/pyqt6_sip-13.10.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.whl",
           "sha256": "37af463dcce39285e686d49523d376994d8a2508b9acccb7616c4b117c9c4ed7"
+        },
+        {
+          "type": "file",
+          "only-arches": ["aarch64"],
+          "url": "https://files.pythonhosted.org/packages/51/11/1fc3bae02a12a3ac8354aa579b56206286e8b5ca9586677b1058c81c2f74/pyqt6_sip-13.10.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+          "sha256": "4ccf197f8fa410e076936bee28ad9abadb450931d5be5625446fd20e0d8b27a6"
         }
       ]
     },
@@ -32,13 +39,20 @@
       "name": "python3-pyqt6-qt6",
       "buildsystem": "simple",
       "build-commands": [
-        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyqt6_qt6-6.10.0-py3-none-manylinux_2_34_x86_64.whl --no-build-isolation"
+        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyqt6_qt6*.whl --no-build-isolation"
       ],
       "sources": [
         {
           "type": "file",
+          "only-arches": ["x86_64"],
           "url": "https://files.pythonhosted.org/packages/c1/32/1d84ab75795b0984935e32d2a51200b94328a45954c28360a97d02f1c376/pyqt6_qt6-6.10.0-py3-none-manylinux_2_34_x86_64.whl",
           "sha256": "cd38b281bb7229b8114f13126aacd77f831a97105fdb1d900260a48ead8c9fcd"
+        },
+        {
+          "type": "file",
+          "only-arches": ["aarch64"],
+          "url": "https://files.pythonhosted.org/packages/d9/56/e8daedfb0e4a79e19500b6271958b915389360b39a3e2847961828d2e0b3/pyqt6_qt6-6.10.0-py3-none-manylinux_2_39_aarch64.whl",
+          "sha256": "497df665091451ab7fde3355e262b243d2a2d97924b899a5cbb193a0cc573b7e"
         }
       ]
     },
@@ -46,13 +60,20 @@
       "name": "python3-pyqt6",
       "buildsystem": "simple",
       "build-commands": [
-        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyqt6-6.10.0-cp39-abi3-manylinux_2_34_x86_64.whl --no-build-isolation"
+        "pip3 install --verbose --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} pyqt6-*.whl --no-build-isolation"
       ],
       "sources": [
         {
           "type": "file",
+          "only-arches": ["x86_64"],
           "url": "https://files.pythonhosted.org/packages/00/31/e55f7b718df92423b5af3f0fe11e770e56d7576c03adc6b6866b0e8beb46/pyqt6-6.10.0-cp39-abi3-manylinux_2_34_x86_64.whl",
           "sha256": "43e94a0ad4713055b47b4676d23432349845729912e4f3d20ac95935931c5e6f"
+        },
+        {
+          "type": "file",
+          "only-arches": ["aarch64"],
+          "url": "https://files.pythonhosted.org/packages/cf/3d/48465697f530addaeaf41f4d5b3e54108ebabd18ab6da19823de5099e807/pyqt6-6.10.0-cp39-abi3-manylinux_2_39_aarch64.whl",
+          "sha256": "357da0f1465557dde249a31bc1f152320b7628a644e1d55d2db09b635394f39f"
         }
       ]
     },
