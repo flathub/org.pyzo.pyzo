@@ -38,8 +38,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://files.pythonhosted.org/packages/ad/f5/dc2e7ca1e6ca1a0d51e8cd78c2c9ee1e0d0c1bab1e50ef0c6b3ccb8ea6ae/pyparsing-3.2.5.tar.gz",
-          "sha256": "00b2a87a8a6a7e5c2fcfe3f9b50cc8c7ad86c4821a35fc7c2e9f65dfd29bb81a"
+          "url": "https://files.pythonhosted.org/packages/37/fe/65c989f70bd630b589adfbbcd6ed238af22319e90f059946c26b4835e44b/pyparsing-3.1.4.tar.gz",
+          "sha256": "f86ec8d1a83f11977c9a6ea7598e8c27fc5cddfa5b07ea2241edbbde1d7bc032"
         }
       ]
     },
