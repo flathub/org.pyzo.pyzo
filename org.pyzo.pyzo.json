@@ -24,8 +24,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://files.pythonhosted.org/packages/31/eb/5c630688e525ef05ebaee5907e3f8c3bc5e9d6c45a7d86e5c8a67fbeae8e/packaging-25.0.tar.gz",
-          "sha256": "36b14e099e506e01f0734f4a7e3e80d8f0dccce40c23df3fbc4a9bb1466b8d91"
+          "url": "https://files.pythonhosted.org/packages/d0/63/68dbb6eb2de9cb10ee4c9c14a0148804425e13c4fb20d61cce69f53106da/packaging-24.2.tar.gz",
+          "sha256": "c228a6dc5e932d346bc5739379109d49e8853dd8223571c7c5b55260edc0b97f"
         }
       ]
     },
