@@ -24,8 +24,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://files.pythonhosted.org/packages/86/3c/bcd09ec5df7123abcf695009221a52f90438d877a2f1499453c6938f5728/packaging-20.9.tar.gz",
-          "sha256": "5b327ac1320dc863dca72f4514ecc086f31186744b84a230374cc1fd776feae5"
+          "url": "https://files.pythonhosted.org/packages/31/eb/5c630688e525ef05ebaee5907e3f8c3bc5e9d6c45a7d86e5c8a67fbeae8e/packaging-25.0.tar.gz",
+          "sha256": "36b14e099e506e01f0734f4a7e3e80d8f0dccce40c23df3fbc4a9bb1466b8d91"
         }
       ]
     },
@@ -38,8 +38,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/pyparsing/pyparsing/releases/download/pyparsing_2.4.7/pyparsing-2.4.7.tar.gz",
-          "sha256": "c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1"
+          "url": "https://files.pythonhosted.org/packages/ad/f5/dc2e7ca1e6ca1a0d51e8cd78c2c9ee1e0d0c1bab1e50ef0c6b3ccb8ea6ae/pyparsing-3.2.5.tar.gz",
+          "sha256": "00b2a87a8a6a7e5c2fcfe3f9b50cc8c7ad86c4821a35fc7c2e9f65dfd29bb81a"
         }
       ]
     },
@@ -55,8 +55,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/uiri/toml/archive/refs/tags/0.10.2.tar.gz",
-          "sha256": "71d4039bbdec91e3e7591ec5d6c943c58f9a2d17e5f6783acdc378f743fcdd2a"
+          "url": "https://files.pythonhosted.org/packages/be/ba/1f744cdc819428fc6b5084ec34d9b30660f6f9daaf70eead706e3203ec3c/toml-0.10.2.tar.gz",
+          "sha256": "b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"
         }
       ]
     },
@@ -72,8 +72,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://files.pythonhosted.org/packages/33/e9/27730ac17713c0a80d81d8f3bb56213f1549d96f9dc183fd16a7eec6287c/sip-5.5.0.tar.gz",
-          "sha256": "5d024c419b30fea8a6de8c71a560c7ab0bc3c221fbfb14d55a5b865bd58eaac5"
+          "url": "https://files.pythonhosted.org/packages/4d/34/b06f5f83074eeb5e1bc2e65e0c4f78e5d46c6f2f33d1f29c94ecf5d89d79/sip-6.14.0.tar.gz",
+          "sha256": "37f3f6e9e735437f4ac0d0c6b15c5fbec7b93fa59a9e17fd0b0b7b23d9cc6c48"
         }
       ]
     },
@@ -86,8 +86,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://files.pythonhosted.org/packages/b1/40/dd8f081f04a12912b65417979bf2097def0af0f20c89083ada3670562ac5/PyQt5_sip-12.9.0.tar.gz",
-          "sha256": "d3e4489d7c2b0ece9d203ae66e573939f7f60d4d29e089c9f11daa17cfeaae32"
+          "url": "https://files.pythonhosted.org/packages/04/07/3fa8cff3a88f54c8e8ed92584c9cdbfd1e9917a7ac2f2eff5ca6daeb90cf/PyQt5_sip-12.17.1.tar.gz",
+          "sha256": "8a2b2799c3a3dda9e60f2bfc09c68ad2b0a2b3b3ab86e4c4f2b0e026e1e5a120"
         }
       ]
     },
@@ -114,8 +114,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://files.pythonhosted.org/packages/8e/a4/d5e4bf99dd50134c88b95e926d7b81aad2473b47fde5e3e4eac2c69a8942/PyQt5-5.15.4.tar.gz",
-          "sha256": "2a69597e0dd11caabe75fae133feca66387819fc9bc050f547e5551bce97e5be"
+          "url": "https://files.pythonhosted.org/packages/4d/5b/b7bc90e29e14d9324965951c5b54cf4d20597b90e43ba77d28a1b17f889c/PyQt5-5.15.11.tar.gz",
+          "sha256": "ffa6b8e4b11dbc7045df6efe0c93a2bf4eef8d12eeb3b98f05ef96c9024e2b8a"
         }
       ]
     },
@@ -148,8 +148,8 @@
         },
         {
           "type" : "file",
-          "url" : "https://files.pythonhosted.org/packages/16/80/67cb8b4026b5997cf3354f3b693ec7c38ef855f439eb977f0198a9121026/pyzo-4.11.2.tar.gz",
-          "sha256" : "f9d3bcd35bf28643509fb02307a1f889c07483e001c0349bb63b0149d37165ca"
+          "url" : "https://files.pythonhosted.org/packages/ea/67/e48e4c6a5b7c1c2f96addf14c94ad9c1d71cf3ae95fbe0ec0f9e0cb1e1cb/pyzo-4.20.0.tar.gz",
+          "sha256" : "4a5d9c99f8dfa3cc27c45fad9cf2d90ed24a3a6e34b7f0c9d70e9f8c36bbda66"
         }
       ]
     }
