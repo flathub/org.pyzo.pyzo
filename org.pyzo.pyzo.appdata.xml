@@ -2,11 +2,13 @@
 <!-- Copyright 2014-2017 Almar Klein -->
 <!-- This is a appdata file for freedesktop software centers. -->
 <!-- Please let me know if this needs changes. -->
-<component>
-  <id type="desktop">org.pyzo.pyzo.desktop</id>
+<component type="desktop">
+  <id>org.pyzo.pyzo</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>BSD-2-Clause</project_license>
-   <releases>
+  <releases>
+    <release date="2025-08-04" version="4.20"/>
+    <release date="2020-11-19" version="4.11.2"/>
     <release date="2019-09-16" version="4.9.0"/>
   </releases>
   <name>Pyzo</name>
@@ -37,19 +39,19 @@
   <screenshots>
     <screenshot type="default" height="700" width="1244">
       <image>https://pyzo.org/screenshots/screen-default-16-9.png</image>
-      <caption/>
+      <caption>Main window</caption>
     </screenshot>
     <screenshot height="611" width="945">
       <image>https://pyzo.org/screenshots/screen00_linux.png</image>
-      <caption/>
+      <caption>Editing window</caption>
     </screenshot>
   </screenshots>
-  <url type="homepage">http://pyzo.org</url>
+  <url type="homepage">https://pyzo.org</url>
   <url type="translate">https://github.com/pyzo/pyzo/wiki/Translations</url>
   <update_contact>almar.klein@gmail.com</update_contact>
   <developer_name>almar klein</developer_name>
   <url type="bugtracker">https://github.com/pyzo/pyzo/issues</url>
-  <url type="donation"/>
-  <url type="help">http://www.pyzo.org/start.html</url>
+  <url type="help">https://www.pyzo.org/start.html</url>
   <content_rating type="oars-1.1" />
+  <launchable type="desktop-id">org.pyzo.pyzo.desktop</launchable>
 </component>
